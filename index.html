@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trexeter</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Vimeo Player API -->
+  <script src="https://player.vimeo.com/api/player.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <h1 class="page-title">Trexeter</h1>
+    <nav class="main-nav">
+      <a href="index.html" class="active">HOME</a>
+      <a href="epk.html">PRESS KIT</a>
+      <a href="radio.html">RADIO</a>
+      <a href="lessons.html">DJ LESSONS</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- HOME VIDEO -->
+  <main class="home-video">
+    <div class="home-video-container">
+
+      <!-- Vimeo embed EXACTO (solo params necesarios) -->
+      <div class="home-video-embed">
+        <iframe
+          id="homeVimeo"
+          src="https://player.vimeo.com/video/1154106896?autoplay=1&loop=1&muted=1"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <!-- MUTE / UNMUTE BUTTON -->
+      <button id="muteToggle" class="mute-toggle">
+        <img
+          id="muteIcon"
+          src="images/muted.png"
+          alt="Mute / Unmute"
+        />
+      </button>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <a class="email" href="mailto:trex13eter@gmail.com">
+      <span>trex13eter@gmail.com</span>
+    </a>
+
+    <div class="social">
+      <a href="https://instagram.com" target="_blank">
+        <img src="images/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://bandcamp.com" target="_blank">
+        <img src="images/bandcamp.svg" alt="Bandcamp">
+      </a>
+    </div>
+  </footer>
+
+  <!-- AUDIO CONTROL (NO LAYOUT IMPACT) -->
+  <script>
+    const iframe = document.getElementById('homeVimeo');
+    const player = new Vimeo.Player(iframe);
+    const button = document.getElementById('muteToggle');
+    const icon = document.getElementById('muteIcon');
+
+    let muted = true;
+
+    button.addEventListener('click', () => {
+      if (muted) {
+        player.setVolume(1);
+        icon.src = 'images/unmuted.png';
+      } else {
+        player.setVolume(0);
+        icon.src = 'images/muted.png';
+      }
+      muted = !muted;
+    });
+  </script>
+
+</body>
+</html>
