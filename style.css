@@ -292,7 +292,7 @@ body {
 }
 
 .radio-image img {
-  width: 100%;
+  width: 80%;
   height: auto;
   display: block;
 }
@@ -439,4 +439,5 @@ body {
   width: 32px;
   height: 32px;
 }
+
 
