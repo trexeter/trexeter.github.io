@@ -298,13 +298,13 @@ body {
 }
 
 .radio-text h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   margin-bottom: 24px;
 }
 
 .radio-text p {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.6;
   margin-bottom: 24px;
 }
@@ -328,7 +328,7 @@ body {
 .lessons-text {
   text-align: left;
   max-width: 520px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
@@ -439,6 +439,7 @@ body {
   width: 32px;
   height: 32px;
 }
+
 
 
 
